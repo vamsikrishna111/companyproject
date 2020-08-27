@@ -24,4 +24,4 @@ Route::post('companylogin','usercontroller@companylogin');
 
 Route::get('forgetpassword','usercontroller@forgetpassword');
 Route::post('conformpassword','usercontroller@conformpassword');
-
+Route::get('dashboard','usercontroller@dashboard');

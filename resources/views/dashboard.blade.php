@@ -9,7 +9,19 @@
 </head>
 <body>
 <div class="container mt-3">
-<div class="row">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+   
+<h1 class="text-danger">dashboard</h1>
+
+
+    </div>
+  </div>
+
+<div class="row mt-3">
   <div class="col-md-4">
   @foreach ($data as $value)
 <p>DATE:{{$value->created_at}}</p>

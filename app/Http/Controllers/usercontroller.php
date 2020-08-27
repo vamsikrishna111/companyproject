@@ -74,8 +74,8 @@ $r->validate(
       if(count($data)==1){
           $r->session()->put('data', $data);
           $data=$r->session()->get('data');
-           
-          return view('dashboard',['data'=>$data]);
+           return redirect()->to('dashboard');
+        //  return view('dashboard',['data'=>$data]);
         
 
 
@@ -95,10 +95,7 @@ $r->validate(
         return view(' forgetpassword');
     }
     public function conformpassword(Request $r){
-//  $email=$r->email;
-//   $password=$r->password;
-//   $cpassword=$r->cpassword;
-  
+
   $r->validate([
     'email' => [
         'required',
@@ -143,6 +140,14 @@ $r->validate(
         return back()->with('error','please enter register email');
 
     }
+}
+public function dashboard(Request $r){
+   
+    $data=$r->session()->get('data');
+  
+   return view('dashboard',['data'=>$data]);
+  
+
 }
 }
     
